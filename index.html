@@ -8,7 +8,7 @@
     html, body {
       /* 禁止滚动 */
       overflow: hidden;
-      /* 浏览器不会对触摸事件做任何处理，所有触摸事件都会被忽略 */
+      /* 触摸设备上浏览器不会对触摸事件做任何处理，所有触摸事件都会被忽略 */
       touch-action: none;
       /* 禁止选中 */
       user-select: none;
@@ -206,12 +206,12 @@
 
     // 照片墙圆弧半径
     let radius = 560;
-    // 第一排容器
+    // 每排容器
     let boxImgs1 = document.getElementById('box-imgs1');
     let boxImgs2 = document.getElementById('box-imgs2');
     let boxImgs3 = document.getElementById('box-imgs3');
     let boxImgs4 = document.getElementById('box-imgs4');
-    // 第一排所有图片
+    // 每排容器中的所有图片
     let imgs1 = Array.from(boxImgs1.getElementsByTagName('img'))
     let imgs2 = Array.from(boxImgs2.getElementsByTagName('img'))
     let imgs3 = Array.from(boxImgs3.getElementsByTagName('img'))
@@ -314,8 +314,6 @@
             playAutoRotate(true)
           }
         })
-        // 开启自动旋转
-        playAutoRotate(true)
         // 清空
         this.onpointermove = this.onpointerup = null
       }
