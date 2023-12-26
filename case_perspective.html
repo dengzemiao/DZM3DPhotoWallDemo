@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    html, body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      padding: 0;
+    }
+    .box-list {
+      margin-top: 50px;
+      width: 100%;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+    }
+    .box-item {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .box-item .box-img {
+      border: 1px dashed orange;
+    }
+    .box-item span {
+      margin-top: 10px;
+    }
+    .box-item span:last-child {
+      margin-bottom: 10px;
+    }
+    img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      /* 反复执行动画，注释，免得影响主要效果 */
+      /* animation-direction: alternate !important; */
+    }
+    .box-row-2 .box-img {
+      perspective: 400px;
+      -webkit-perspective: 400px;
+    }
+    .box-row-3 .box-img {
+      perspective: 200px;
+      -webkit-perspective: 200px;
+    }
+    .box-row-4 .box-img {
+      perspective: 400px;
+      -webkit-perspective: 400px;
+      perspective-origin: left;
+    }
+    .box-row-5 .box-img {
+      perspective: 200px;
+      -webkit-perspective: 200px;
+      perspective-origin: left;
+    }
+    .img1, .img4, .img7, .img10, .img13 {
+      animation: img1 2s infinite;
+    }
+    .img2, .img5, .img8, .img11, .img14 {
+      animation: img2 2s infinite;
+    }
+    .img3, .img6, .img9, .img12, .img15 {
+      animation: img3 2s infinite;
+    }
+    @keyframes img1 {
+      form {
+        transform: rotateX(0deg);
+      }
+      to {
+        transform: rotateX(180deg);
+      }
+    }
+    @keyframes img2 {
+      form {
+        transform: rotateY(0deg);
+      }
+      to {
+        transform: rotateY(180deg);
+      }
+    }
+    @keyframes img3 {
+      form {
+        transform: rotateZ(0deg);
+      }
+      to {
+        transform: rotateZ(180deg);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="box-list">
+    <!-- 第一排 -->
+    <div class="box-item box-row-1">
+      <div class="box-img">
+        <img class="img1" src="img/bgimg.png">
+      </div>
+      <span>rotateX(180deg)</span>
+    </div>
+    <div class="box-item box-row-1">
+      <div class="box-img">
+        <img class="img2" src="img/bgimg.png">
+      </div>
+      <span>rotateY(180deg)</span>
+    </div>
+    <div class="box-item box-row-1">
+      <div class="box-img">
+        <img class="img3" src="img/bgimg.png">
+      </div>
+      <span>rotateZ(180deg)</span>
+    </div>
+    <!-- 第二排 -->
+    <div class="box-item box-row-2">
+      <div class="box-img">
+        <img class="img4" src="img/bgimg.png">
+      </div>
+      <span>rotateX(180deg)</span>
+      <span>perspective: 400px;</span>
+    </div>
+    <div class="box-item box-row-2">
+      <div class="box-img">
+        <img class="img5" src="img/bgimg.png">
+      </div>
+      <span>rotateY(180deg)</span>
+      <span>perspective: 400px;</span>
+    </div>
+    <div class="box-item box-row-2">
+      <div class="box-img">
+        <img class="img6" src="img/bgimg.png">
+      </div>
+      <span>rotateZ(180deg)</span>
+      <span>perspective: 400px;</span>
+    </div>
+    <!-- 第三排 -->
+    <div class="box-item box-row-3">
+      <div class="box-img">
+        <img class="img7" src="img/bgimg.png">
+      </div>
+      <span>rotateX(180deg)</span>
+      <span>perspective: 200px;</span>
+    </div>
+    <div class="box-item box-row-3">
+      <div class="box-img">
+        <img class="img8" src="img/bgimg.png">
+      </div>
+      <span>rotateY(180deg)</span>
+      <span>perspective: 200px;</span>
+    </div>
+    <div class="box-item box-row-3">
+      <div class="box-img">
+        <img class="img9" src="img/bgimg.png">
+      </div>
+      <span>rotateZ(180deg)</span>
+      <span>perspective: 200px;</span>
+    </div>
+    <!-- 第四排 -->
+    <div class="box-item box-row-4">
+      <div class="box-img">
+        <img class="img10" src="img/bgimg.png">
+      </div>
+      <span>rotateX(180deg)</span>
+      <span>perspective: 400px;</span>
+      <span>perspective-origin: left;</span>
+    </div>
+    <div class="box-item box-row-4">
+      <div class="box-img">
+        <img class="img11" src="img/bgimg.png">
+      </div>
+      <span>rotateY(180deg)</span>
+      <span>perspective: 400px;</span>
+      <span>perspective-origin: left;</span>
+    </div>
+    <div class="box-item box-row-4">
+      <div class="box-img">
+        <img class="img12" src="img/bgimg.png">
+      </div>
+      <span>rotateZ(180deg)</span>
+      <span>perspective: 400px;</span>
+      <span>perspective-origin: left;</span>
+    </div>
+    <!-- 第五排 -->
+    <div class="box-item box-row-5">
+      <div class="box-img">
+        <img class="img13" src="img/bgimg.png">
+      </div>
+      <span>rotateX(180deg)</span>
+      <span>perspective: 200px;</span>
+      <span>perspective-origin: left;</span>
+    </div>
+    <div class="box-item box-row-5">
+      <div class="box-img">
+        <img class="img14" src="img/bgimg.png">
+      </div>
+      <span>rotateY(180deg)</span>
+      <span>perspective: 200px;</span>
+      <span>perspective-origin: left;</span>
+    </div>
+    <div class="box-item box-row-5">
+      <div class="box-img">
+        <img class="img14" src="img/bgimg.png">
+      </div>
+      <span>rotateZ(180deg)</span>
+      <span>perspective: 200px;</span>
+      <span>perspective-origin: left;</span>
+    </div>
+  </div>
+</body>
+</html>
